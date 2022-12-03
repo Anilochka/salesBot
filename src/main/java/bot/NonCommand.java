@@ -52,7 +52,8 @@ public class NonCommand {
         StringBuilder result = new StringBuilder(String.valueOf(input.charAt(0)));
         for (int i = 1; i < input.length(); i++) {
             if (!String.valueOf(input.charAt(i)).equals(String.valueOf(input.charAt(i - 1))) ||
-                    (String.valueOf(input.charAt(i)).equals(String.valueOf(input.charAt(i - 1))) && !String.valueOf(input.charAt(i)).equals(","))) {
+                    (String.valueOf(input.charAt(i)).equals(String.valueOf(input.charAt(i - 1)))
+                            && !String.valueOf(input.charAt(i)).equals(","))) {
                 result.append((input.charAt(i)));
             }
         }
